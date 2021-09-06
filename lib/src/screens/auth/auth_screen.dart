@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_1/src/screens/auth/RegisterScreen.dart';
          
       class AuthScreen extends StatelessWidget{
   const AuthScreen({Key? key}) : super(key: key);
@@ -32,6 +33,7 @@ import 'package:flutter/cupertino.dart';
 
             CupertinoTextField(
               placeholder: 'Пароль',
+              obscureText: true,
               decoration: BoxDecoration(
                 color: CupertinoColors.white,
                  ),
@@ -49,13 +51,14 @@ import 'package:flutter/cupertino.dart';
 
             CupertinoButton.filled(
               onPressed: () {
-  Navigator.pushNamed(context, '/auth/register');
+  Navigator.push(
+    context,
     CupertinoPageRoute(
       builder: (context) {
-        return AuthScreen();
+        return RegisterScreen();
       },
-    );
-  
+    ),
+  );
 },
               child: Text('Зарегистрироваться'),
 
