@@ -1,11 +1,8 @@
 import 'package:flutter/cupertino.dart';
-
-class AuthScreen extends StatelessWidget {
+         
+      class AuthScreen extends StatelessWidget{
   const AuthScreen({Key? key}) : super(key: key);
 
-  get child => null;
-
-  get onPressed => null;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +13,7 @@ class AuthScreen extends StatelessWidget {
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        
           children: [
             CupertinoTextField(
               placeholder: 'Логин или почта',
@@ -37,18 +34,32 @@ class AuthScreen extends StatelessWidget {
               placeholder: 'Пароль',
               decoration: BoxDecoration(
                 color: CupertinoColors.white,
-              ),
+                 ),
               padding: const EdgeInsets.symmetric(vertical: 19, horizontal: 16),
             ),
-            SizedBox(height: 32),
+           
+            SizedBox(height: 32), 
+             
             CupertinoButton.filled(
-              onPressed: () {},
+               onPressed: () {},
               child: Text('Войти'),
             ),
+
+            SizedBox(height: 19),
+
             CupertinoButton.filled(
+              onPressed: () {
+  Navigator.pushNamed(context, '/auth/register');
+    CupertinoPageRoute(
+      builder: (context) {
+        return AuthScreen();
+      },
+    );
+  
+},
               child: Text('Зарегистрироваться'),
-              onPressed: () {},
-            ),
+
+           ),
           ],
         ),
       ),
