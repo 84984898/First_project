@@ -1,0 +1,11 @@
+{
+    "login": "maripbekoff",
+    "password": "myPassword123",
+    "firstName": "Алим",
+    "age": 19,
+    "isMale": true,
+    "address": {
+      "city": "Almaty",
+      "postalCode": "050000"
+    }
+  }
